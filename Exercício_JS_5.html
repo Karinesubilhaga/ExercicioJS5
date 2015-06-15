@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div><h1>Cadastro de Compras</h1></div>
+        <script>
+            continuar = 0;
+            var nome = prompt('Digite seu nome: ', 'ex.: Fulano');
+
+            document.write('Seu nome é: ' + nome);
+            document.write('<br>');
+            valortotal=0;
+
+            while (continuar < 2) {
+                var produto = prompt('Informe o produto: ');
+                var valor = parseFloat(prompt('Digite o valor: ').replace(',','.'));
+                alert(valor);
+                var parcelas = prompt('Deseja pagar em quantas parcelas? ');
+                continuar++;
+
+                valortotal = valortotal + valor;
+                alert(valortotal);
+
+                document.write('Produto: ' + produto);
+                document.write('<br>');
+                document.write('Valor unitário: ' + valor);
+                document.write('<br>');
+                document.write('Valor das parcelas: ' + valor / parcelas);
+                document.write('<br>');
+                document.write('Número de vezes: ' + parcelas);
+                document.write('<br>');
+            }
+            document.write('Valor Total da Compra: ' + valortotal);
+
+
+        </script>
+    </body>
+</html>
